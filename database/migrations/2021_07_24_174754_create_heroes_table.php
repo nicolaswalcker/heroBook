@@ -17,6 +17,7 @@ class CreateHeroesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->string('image');
             $table->string('powerups');
             $table->timestamps();
         });
