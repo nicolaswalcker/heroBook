@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class HeroRequest extends FormRequest
@@ -23,8 +24,32 @@ class HeroRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+
+        $id = $this->segment(2);
+        $rules = [
+            'name' => [
+                'string',
+                'required',
+                'min:3',
+                'max:160',
+            ],
+            'description' => [
+                'string',
+                'required',
+                'min:3',
+                'max:244',
+            ],
+            'image' => [
+                'nullable',
+                'image',
+            ],
+            'powerups' => [
+                'string',
+                'required',
+                'min:3',
+                'max:244',
+            ]
         ];
+        return $rules;
     }
 }
