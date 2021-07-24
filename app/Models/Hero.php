@@ -11,8 +11,8 @@ class Hero extends Model
 
     protected $fillable = [
         'name',
-        'image',
         'description',
+        'image',
         'powerups',
     ];
 }
