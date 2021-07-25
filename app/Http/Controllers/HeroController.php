@@ -46,7 +46,7 @@ class HeroController extends Controller
 
         $data = $request->all();
 
-        // Função que verifica se a imagem do herói e válida e coloca o nome do herói como nome da própria imagem
+        // Função que verifica se a imagem do herói e válida
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('heroes','public');
             
@@ -54,7 +54,7 @@ class HeroController extends Controller
         else {
             return redirect()->back()->withInput($request->all())->with('danger', 'Insira uma imagem!');
         }
-
+        
         Hero::create($data);
         return redirect()->route('heroes.index');
     }

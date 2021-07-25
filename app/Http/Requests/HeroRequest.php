@@ -24,6 +24,7 @@ class HeroRequest extends FormRequest
      */
     public function rules()
     {
+        // Validações de dados do herói
         $id = $this->segment(2);
 
         $rules = [
