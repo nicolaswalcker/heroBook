@@ -3,9 +3,8 @@
 ## Tabela de conteudos
 
 - [Sobre](#about)
-- [Inicializando](#getting_started)
 - [Pré-requisitos](#pre-requisites)
-- [Instalação](#initialization)
+- [Instalação](#installation)
 
 ## Sobre <a name = "about"></a>
 Uma aplicação simples que simula um catálogo de heróis. Com ela, podemos cadastrar novos heróis com nome, descrição, imagem e super-poderes. Podemos também deletar, editar e visualizar individualmente cada herói.
