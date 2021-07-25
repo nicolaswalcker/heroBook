@@ -5,12 +5,12 @@
 @endsection
 
 @section('tituloSecao')
-    <h1>{{$hero->name}}</h1>
+    <h1 class="c-logo">Sala de visualização heróica</h1>
 @endsection
 
 @section('content')
     <div class="l-show-container">
-        <div class="c-hero-card">
+        <div class="c-hero-card data-tilt">
             <div class="c-control-buttons">
                 <form class="c-control-buttons-form" action="{{ route('heroes.destroy', $hero->id) }}" method="post">
                     @csrf
@@ -24,14 +24,21 @@
                     </button>
                 </form>
             </div>
-            <img class="c-hero-image" src="{{ url("/storage/{$hero->image}") }}" alt="{{ $hero->name }}">
-            <h3 class="c-hero-name">{{ $hero->name }}</h3>
-            <p class="c-hero-description">{{ Str::limit($hero->description ?? '', 300, '...') }}
-                @foreach (explode(',', $hero->powerups) as $powerup)
-                    <span class="c-hero-powerup">{{ $powerup }}</span>
-                @endforeach
-            </p>
+            <div class="c-content-card">
+                <h3 class="c-hero-name">{{ $hero->name }}</h3>
+                <img class="c-hero-image" src="{{ url("/storage/{$hero->image}") }}" alt="{{ $hero->name }}">
+                <p class="c-hero-description">{{ Str::limit($hero->description ?? '', 150, '...') }}
+                </p>
+
+                <div class="c-powerup-area">
+                    @foreach (explode(',', $hero->powerups) as $powerup)
+                        <span class="c-hero-powerup">{{ $powerup }}</span>
+                    @endforeach
+                </div>
+            </div>
         </div>
-        <a class="c-back-button" href="{{ route('heroes.index') }}">Voltar</a>
+    </div>
+    <div class="c-back-show-button">
+        <a class="c-back-button c-back-show-button" href="{{ route('heroes.index') }}">Voltar</a>
     </div>
 @endsection

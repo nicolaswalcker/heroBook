@@ -143,7 +143,7 @@ class HeroController extends Controller
         $hero->delete();
         return redirect()
             ->route('heroes.index')
-            ->with('message', "Herói {$hero->name} dispensado de deus deveres heróicos!");
+            ->with('message', "Herói {$hero->name} dispensado de seus deveres heróicos!");
     }
     public function search(Request $request)
     {

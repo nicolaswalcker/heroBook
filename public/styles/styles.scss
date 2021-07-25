@@ -303,3 +303,19 @@ body {
         }
     }
 }
+
+.l-show-container{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.c-back-show-button{
+    display: flex;
+    align-items: flex-end;
+    justify-content:flex-end;
+
+    .c-back-button{
+        justify-content:center;
+    }
+}
