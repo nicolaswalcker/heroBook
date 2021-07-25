@@ -14,7 +14,7 @@ class HeroRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -40,7 +40,7 @@ class HeroRequest extends FormRequest
                 'max:244',
             ],
             'image' => [
-                'nullable',
+                'required',
                 'image',
             ],
             'powerups' => [

@@ -47,11 +47,12 @@ class HeroController extends Controller
         $data = $request->all();
 
         // Função que verifica se a imagem do herói e válida e coloca o nome do herói como nome da própria imagem
-        if ($request->image->isValid()) {
-            $nameFile = Str::of($request->title)->slug('-') . '.' . $request->image->getClientOriginalExtension();
-
-            $image = $request->image->storeAs('hero', $nameFile);
-            $data['image'] = $image;
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('heroes','public');
+            
+        }
+        else {
+            return redirect()->back()->withInput($request->all())->with('danger', 'Insira uma imagem!');
         }
 
         Hero::create($data);
@@ -87,7 +88,7 @@ class HeroController extends Controller
             return redirect()->back();
         };
 
-        return view('admin.heroes.edit', compact('hero'));
+        return view('heroes.edit', compact('hero'));
     }
 
     /**
@@ -107,21 +108,19 @@ class HeroController extends Controller
         $data = $request->all();
 
         // Verificação da imagem do herói
-        if ($request->image && $request->image->isValid()) {
-            if (Storage::exists($hero->image)) {
-                Storage::delete($hero->image);
-            }
-            $nameFile = Str::of($request->title)->slug('-') . '.' . $request->image->getClientOriginalExtension();
-
-            $image = $request->image->storeAs('heroes', $nameFile);
-            $data['image'] = $image;
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('heroes','public');
+            
+        }
+        else {
+            return redirect()->back()->withInput($request->all())->with('danger', 'Insira uma imagem!');
         }
 
         $hero->update($data);
 
         return redirect()
             ->route('heroes.index')
-            ->with('message', "Estrutura do herói: {$hero->title} alterada com sucesso!");
+            ->with('message', "Estrutura do herói: {$hero->name} alterada com sucesso!");
     }
 
     /**
@@ -143,8 +142,8 @@ class HeroController extends Controller
 
         $hero->delete();
         return redirect()
-            ->route('hero.index')
-            ->with('message', "Herói {$hero->title} dispensado de deus deveres heróicos!");
+            ->route('heroes.index')
+            ->with('message', "Herói {$hero->name} dispensado de deus deveres heróicos!");
     }
     public function search(Request $request)
     {

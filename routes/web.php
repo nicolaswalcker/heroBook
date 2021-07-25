@@ -25,7 +25,3 @@ Route::group(['prefix' => 'heroes', 'as' => 'heroes.'], function () {
     Route::put('/{id}', [HeroController::class, 'update'])->name('update');
 
 });
-
-Route::get('/', function () {
-    return view('heroes.index');
-});
