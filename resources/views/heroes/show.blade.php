@@ -14,8 +14,7 @@
             <div class="c-control-buttons">
                 <form class="c-control-buttons-form" action="{{ route('heroes.destroy', $hero->id) }}" method="post">
                     @csrf
-                    <span><a class="c-control-button" href="{{ route('heroes.show', $hero->id) }}">
-                            <i class="fas fa-eye"></i></a></span>
+                    
                     <span><a class="c-control-button" href="{{ route('heroes.edit', $hero->id) }}">
                             <i class="fas fa-edit"></i></a></span>
                     <input type="hidden" name="_method" value="delete">
