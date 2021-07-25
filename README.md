@@ -3,9 +3,8 @@
 ## Tabela de conteudos
 
 - [Sobre](#about)
-- [Inicializando](#getting_started)
 - [Pré-requisitos](#pre-requisites)
-- [Inicialização](#initialization)
+- [Instalação](#installation)
 
 ## Sobre <a name = "about"></a>
 Uma aplicação simples que simula um catálogo de heróis. Com ela, podemos cadastrar novos heróis com nome, descrição, imagem e super-poderes. Podemos também deletar, editar e visualizar individualmente cada herói.
@@ -23,7 +22,7 @@ Uma aplicação simples que simula um catálogo de heróis. Com ela, podemos cad
 - NPM ou Yarn
 ```
 
-### Instalação <a name = "initialization"></a>
+### Instalação <a name = "installation"></a>
 
 Para instalar o projeto e baixar suas dependências, execute:
 
