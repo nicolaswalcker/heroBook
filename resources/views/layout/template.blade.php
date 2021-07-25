@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <a class="c-logo" href="{{ route('heroes.index') }}">HeroBook</a>
+        <h1>@yield('tituloSecao')</h1>
     </header>
     <main>
         @yield('content')

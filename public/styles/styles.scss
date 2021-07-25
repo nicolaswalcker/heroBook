@@ -13,10 +13,10 @@ $redPigment: #ea2027;
 $redLight: #d3383e;
 $pixelatedGrass: #009432;
 $white: #fff;
-$random1: random(255);
-$random2: random(255);
-$random3: random(255);
-$randomColor: rgba($random1, $random2, $random3, 1);
+
+html{
+    height: 100%;
+}
 
 header {
     text-align: center;
@@ -28,7 +28,7 @@ header {
 }
 
 body {
-    padding: 0.75rem 5rem 1rem 5rem;
+    padding: 0.75rem 5rem .25rem 5rem;
     width: 100%;
     height: 100%;
     font-family: "Lato", sans-serif, Helvetica;
@@ -39,9 +39,9 @@ body {
 .c-form-template {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
-    height: 80%;
+    height: 70%;
 
     .c-name-input-area,
     .c-powerups-input-area,
@@ -83,3 +83,70 @@ body {
         align-items: center;
     }
 }
+
+.l-create-container, .l-edit-container{
+    .c-form-template{
+        height: 70vh;
+    }
+    .c-redirect-buttons{
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        justify-content:flex-end;
+        gap: 2rem;
+    }
+    
+}
+.c-submit-buttom{
+    background-color: $pixelatedGrass;
+    padding: .45rem 1rem;
+    border-radius: .25rem;
+    color: $white;
+    width: 10rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s all ease;
+
+    &:hover{
+        background-color: $puffinsBill;
+        
+    }
+}
+.c-back-button{
+    color: $white;
+    width: 10rem;
+    font-size: 1.3rem;
+    border-radius: .25rem;
+    padding: .45rem 1rem;
+    text-align: center;
+    border: .15rem solid $white;
+    transition: .2s all ease;
+
+    &:hover{
+        background-color: rgba(0, 0, 0, .1);
+    }
+}
+
+@media (max-width: 540px) {
+    body{
+        .c-logo{
+            font-size: 2rem;
+        }
+    }
+    .l-create-container, .l-edit-container{
+        .c-redirect-buttons{
+            align-self: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .c-submit-buttom, .c-back-button{
+            width: 8rem;
+            margin-top: .75rem;
+            font-size: .95rem;
+            padding: .45rem .75rem;
+        }
+    }
+    
+}
+

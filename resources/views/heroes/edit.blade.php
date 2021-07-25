@@ -4,9 +4,12 @@
     Edit | {{ $hero->name }}
 @endsection
 
+@section('tituloSecao')
+     <h1 class="c-logo">Alterar genética de herói</h1>
+@endsection
+
 @section('content')
     <div class="l-edit-container">
-        <h1 class="c-section-title">Alterar genética de herói</h1>
         <form action="{{ route('heroes.update', $hero->id) }}" method="post" enctype="multipart/form-data">
             @method('put')
             @include('heroes._partials.form')

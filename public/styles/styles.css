@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+html {
+  height: 100%;
+}
+
 header {
   text-align: center;
 }
@@ -19,7 +23,7 @@ header .c-logo {
 }
 
 body {
-  padding: 0.75rem 5rem 1rem 5rem;
+  padding: 0.75rem 5rem .25rem 5rem;
   width: 100%;
   height: 100%;
   font-family: "Lato", sans-serif, Helvetica;
@@ -34,13 +38,14 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 80%;
+  height: 70%;
 }
 
 .c-form-template .c-name-input-area,
@@ -94,6 +99,81 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+.l-create-container .c-form-template, .l-edit-container .c-form-template {
+  height: 70vh;
+}
+
+.l-create-container .c-redirect-buttons, .l-edit-container .c-redirect-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 2rem;
+}
+
+.c-submit-buttom {
+  background-color: #009432;
+  padding: .45rem 1rem;
+  border-radius: .25rem;
+  color: #fff;
+  width: 10rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+.c-submit-buttom:hover {
+  background-color: #ee5a24;
+}
+
+.c-back-button {
+  color: #fff;
+  width: 10rem;
+  font-size: 1.3rem;
+  border-radius: .25rem;
+  padding: .45rem 1rem;
+  text-align: center;
+  border: 0.15rem solid #fff;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+.c-back-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 540px) {
+  body .c-logo {
+    font-size: 2rem;
+  }
+  .l-create-container .c-redirect-buttons, .l-edit-container .c-redirect-buttons {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .l-create-container .c-submit-buttom, .l-create-container .c-back-button, .l-edit-container .c-submit-buttom, .l-edit-container .c-back-button {
+    width: 8rem;
+    margin-top: .75rem;
+    font-size: .95rem;
+    padding: .45rem .75rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

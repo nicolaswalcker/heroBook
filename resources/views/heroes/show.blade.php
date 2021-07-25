@@ -4,6 +4,10 @@
     {{ $hero->name }}
 @endsection
 
+@section('tituloSecao')
+    <h1>{{$hero->name}}</h1>
+@endsection
+
 @section('content')
     <div class="l-show-container">
         <div class="c-hero-card">
