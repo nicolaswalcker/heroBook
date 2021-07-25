@@ -112,15 +112,12 @@ class HeroController extends Controller
             $data['image'] = $request->file('image')->store('heroes','public');
             
         }
-        else {
-            return redirect()->back()->withInput($request->all())->with('danger', 'Insira uma imagem!');
-        }
 
         $hero->update($data);
 
         return redirect()
             ->route('heroes.index')
-            ->with('message', "Estrutura do herói: {$hero->name} alterada com sucesso!");
+            ->with('message', "Estrutura do herói {$hero->name} alterada com sucesso!");
     }
 
     /**

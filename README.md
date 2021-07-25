@@ -9,7 +9,9 @@
 
 ## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+A simple app that simulates a heroes sticker book. With it we can add new heroes, edit our heroes, delete and see each one better.
+
+
 
 ## Getting Started <a name = "getting_started"></a>
 

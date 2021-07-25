@@ -12,8 +12,9 @@
     <div class="l-edit-container">
         <form action="{{ route('heroes.update', $hero->id) }}" method="post" enctype="multipart/form-data">
             @method('PUT')
+            <img class="c-hero-edit-image" src="{{ url("/storage/{$hero->image}") }}" alt="{{ $hero->name }}">
             @include('heroes._partials.form')
-             <img class="c-hero-edit-image" src="{{ url("/storage/{$hero->image}") }}" alt="{{ $hero->name }}">
+             
             <div class="c-redirect-buttons">
                 <button class="c-submit-buttom" type="submit">Salvar</button>
                 <a class="c-back-button" href="{{ route('heroes.index') }}">Voltar</a>

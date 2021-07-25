@@ -23,7 +23,7 @@ header .c-logo {
 }
 
 body {
-  padding: 0.75rem 5rem 0.25rem 5rem;
+  padding: 0.75rem 5rem 1rem 5rem;
   width: 100%;
   height: 100%;
   font-family: "Lato", sans-serif, Helvetica;
@@ -301,7 +301,7 @@ body {
 
 .c-hero-card {
   background-color: #ee5a24;
-  height: 25rem;
+  height: 26rem;
   width: 15rem;
   padding: .25rem;
   border-radius: 0.25rem;
@@ -446,5 +446,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.c-hero-edit-image {
+  float: inline-end;
 }
 /*# sourceMappingURL=styles.css.map */

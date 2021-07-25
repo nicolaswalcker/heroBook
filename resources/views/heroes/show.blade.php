@@ -26,7 +26,7 @@
             <div class="c-content-card">
                 <h3 class="c-hero-name">{{ $hero->name }}</h3>
                 <img class="c-hero-image" src="{{ url("/storage/{$hero->image}") }}" alt="{{ $hero->name }}">
-                <p class="c-hero-description">{{ Str::limit($hero->description ?? '', 150, '...') }}
+                <p class="c-hero-description">{{ Str::limit($hero->description ?? '', 300, '...') }}
                 </p>
 
                 <div class="c-powerup-area">

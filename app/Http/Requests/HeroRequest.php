@@ -41,7 +41,7 @@ class HeroRequest extends FormRequest
                 'max:244',
             ],
             'image' => [
-                'required',
+                
                 'image',
             ],
             'powerups' => [
