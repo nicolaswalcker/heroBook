@@ -24,8 +24,8 @@ class HeroRequest extends FormRequest
      */
     public function rules()
     {
-
         $id = $this->segment(2);
+
         $rules = [
             'name' => [
                 'string',
@@ -50,6 +50,9 @@ class HeroRequest extends FormRequest
                 'max:244',
             ]
         ];
+        if ($this->method() == 'PUT') {
+            $rules['image'] = ['nullable', 'image'];
+        }
         return $rules;
     }
 }
