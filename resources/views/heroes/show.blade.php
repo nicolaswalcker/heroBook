@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="c-show-container">
+    <div class="l-show-container">
         <div class="c-hero-card">
             <div class="c-control-buttons">
                 <form class="c-control-buttons-form" action="{{ route('heroes.destroy', $hero->id) }}" method="post">

@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    border: 0;
+    text-decoration: none;
+}
+
+$radiantYellow: #f79f1f;
+$puffinsBill: #ee5a24;
+$redPigment: #ea2027;
+$redLight: #d3383e;
+$pixelatedGrass: #009432;
+$white: #fff;
+$random1: random(255);
+$random2: random(255);
+$random3: random(255);
+$randomColor: rgba($random1, $random2, $random3, 1);
+
+header {
+    text-align: center;
+    .c-logo {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $white;
+    }
+}
+
+body {
+    padding: 0.75rem 5rem 1rem 5rem;
+    width: 100%;
+    height: 100%;
+    font-family: "Lato", sans-serif, Helvetica;
+    background-color: $radiantYellow;
+    color: $white;
+}
+
+.c-form-template {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 80%;
+
+    .c-name-input-area,
+    .c-powerups-input-area,
+    .c-description-input-area {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .c-label {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .c-small-input {
+        width: 20rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+    }
+    .c-warning-small {
+        color: $redLight;
+    }
+    .c-big-input {
+        border-radius: 0.25rem;
+        width: 20rem;
+        height: 9rem;
+        padding: 0.5rem;
+    }
+}
+
+@media(max-width: 540px){
+    body{
+        padding: .10rem;
+        .c-logo{
+            font-size: 3rem;
+        }
+    }
+    .c-form-template{
+        align-items: center;
+    }
+}

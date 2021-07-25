@@ -4,8 +4,7 @@
 @endsection
 
 @section('content')
-
-    <div class="index-container">
+    <div class="l-index-container">
         <a href="{{ route('heroes.create') }}"><span><i class="fas fa-plus-square"></i></span>Cadastrar novo herói</a>
         @if (session('message'))
             <p class="c-success-message">{{ session('message') }}<i class="fas fa-check-square"></i></p>

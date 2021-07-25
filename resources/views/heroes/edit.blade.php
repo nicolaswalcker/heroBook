@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="c-edit-container">
+    <div class="l-edit-container">
         <h1 class="c-section-title">Alterar genética de herói</h1>
         <form action="{{ route('heroes.update', $hero->id) }}" method="post" enctype="multipart/form-data">
             @method('put')

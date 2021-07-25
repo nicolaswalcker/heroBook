@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="c-create-container">
+    <div class="l-create-container">
         <h1 class="c-section-title">Adicionar novo herói ao seu time!</h1>
         <form action="{{ route('heroes.store') }}" method="post" enctype="multipart/form-data">
             @include('heroes._partials.form')
